@@ -25,6 +25,7 @@ class OrdersController < ApplicationController
     # empty hash means no products in cart :)
     update_cart({})
   end
+  
 
   def perform_stripe_charge
     Stripe::Charge.create(
