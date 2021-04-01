@@ -13,15 +13,25 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th colspan="2">Product</th>
+          
           <th>Category</th>
-          <th>Price</th>
-          <th>Qty Remaining</th>
+          
+          
           <th></th>
         </tr>
       </thead>
       <tbody>
-        
+      <% @categories.each do |category| %>
+        <tr>
+        <td>
+          <h4><%= category.name %></h4>
+          
+        </td>
+        <td>
+          <%= link_to 'Link', "/categories/#{category.id}" %>
+        </td>
+      </tr>
+        <% end %>
       </tbody>
     </table>
 
