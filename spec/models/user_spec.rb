@@ -93,4 +93,36 @@ RSpec.describe User, type: :model do
       expect(user2).to_not be_valid
     end
   end
+
+  describe '.authenticate_with_credentials' do
+    before do
+      @user = User.create(
+        first_name: "first",
+        last_name: 'last',
+        email: 'email@email.com',
+        password: 'password',
+        password_confirmation: 'password'
+      )
+    end
+
+    it "authenicates your login" do
+      login = User.authenticate_with_credentials('email@email.com', 'password')
+      expect(login).to eq(@user)
+    end
+
+    it "does not allow login of invalid user" do
+      login = User.authenticate_with_credentials('myemail@email.com', 'mypass')
+      expect(login).to_not eq(@user)
+    end
+
+    it "allows you to login with space around email" do
+      login = User.authenticate_with_credentials(' email@email.com ', 'password')
+      expect(login).to eq(@user)
+    end
+
+    it "allows you to login with different caps" do
+      login = User.authenticate_with_credentials('EMAIL@email.com', 'password')
+      expect(login).to eq(@user)
+    end
+  end
 end
