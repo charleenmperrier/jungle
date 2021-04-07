@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2.
 
 ## Additional Steps for Apple M1 Machines
 
@@ -36,3 +36,15 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 Homepage of Jungle
 !['homepage'](https://github.com/charleenmperrier/jungle/blob/master/docs/home-page.png?raw=true)
+
+
+Admin management for products and categories
+!['admin'](https://github.com/charleenmperrier/jungle/blob/master/docs/admin-products-management-page.png?raw=true)
+
+
+User signup page
+!['user signup'](https://github.com/charleenmperrier/jungle/blob/master/docs/user-signup.png?raw=true)
+
+
+User checkout/cart
+!['checkout'](https://github.com/charleenmperrier/jungle/blob/master/docs/user-checkout-cart.png?raw=true)
